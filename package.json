@@ -1,0 +1,41 @@
+{
+  "name": "event-tracker",
+  "version": "1.0.0",
+  "description": "A basic Angular 2, Node & Express Event Tracking App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lnfra/event-tracker.git"
+  },
+  "engines": {
+    "node": "5.9.0"
+  },
+  "author": "Lnfra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lnfra/event-tracker/issues"
+  },
+  "homepage": "https://github.com/Lnfra/event-tracker#readme",
+  "dependencies": {
+    "browser-sync": "^2.12.5",
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "angular2": "2.0.0-beta.7",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.10.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.6",
+    "typescript": "^1.9.0-dev.20160417",
+    "zone.js": "0.5.15"
+  }
+}
