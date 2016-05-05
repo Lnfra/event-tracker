@@ -1,0 +1,185 @@
+<!-- ## PAGE HEADER ## -->
+<header id="qcTabTitle" class="qcContainer clearfix">
+  <!-- ## PAGE TITLE ## -->
+  <div class="col-4 col">
+    <p>Reserve your seats</p>
+    <h1>Tickets</h1>
+  </div>
+  <!-- ## PAGE DESC ## -->
+  <div class="col-8 col">
+    <p class="qcTabDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, amet, natus autem doloremque alias ducimus eum minima accusamus iste nihil veritatis eius voluptatum temporibus ullam consequatur velit aspernatur. Molestiae, quasi.</p>
+  </div>
+</header>
+
+
+<!-- ## PAGE CONTENT ## -->
+<div class="hentry qcContainer">
+
+  <!-- ## PAGE CONTENT TABS ## -->
+  <div id="qcPageContentTabs" class="clearfix">
+
+    <!-- ## TAB LINKS ## -->
+    <ul class="clearfix">
+      <li class="active">
+        <a href="#tab-1">General</a>
+      </li>
+      <li>
+        <a href="#tab-2">VIP</a>
+      </li>
+      <li>
+        <a href="#tab-3">RSVP</a>
+      </li>
+      </ul>
+
+      <!-- ## TAB 1 ## -->
+      <div id="tab-1">
+        <div class="box">
+
+          <!-- ## TICKET BOX 1 ## -->
+        <div class="qcTicketBox clearfix">
+          <div class="qcTicketHead col-4 col">
+            <div class="box">
+              <h2>General</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, eius, quidem, molestias, consequatur</p>
+              <a class="qcTicketAction" href="#"><span>$29 USD</span> Book Now</a>
+            </div>
+          </div>
+          <div class="col-8 col">
+            <div class="box">
+              <h3>Features</h3>
+              <ul class="qcTktFeatureList">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li><a href="#" class="tips" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit">Consectetur</a> adipisicing elit</li>
+                <li>Natus autem <a href="#" class="tips" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit">doloremque</a> alias <i>ducimus</i> eum minima</li>
+                <li>Iste nihil veritatis eius <i>voluptatum temporibus</i> ullam</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- ## TAB 2 ## -->
+    <div id="tab-2">
+      <div class="box">
+
+          <!-- ## TICKET BOX 2 ## -->
+        <div class="qcTicketBox clearfix">
+          <div class="qcTicketHead col-4 col">
+            <div class="box">
+              <h2>Vip</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, eius, quidem, molestias, consequatur</p>
+              <a class="qcTicketAction" href="#"><span>$49 USD</span> Book Now</a>
+            </div>
+          </div>
+          <div class="col-8 col">
+            <div class="box">
+              <h3>Features</h3>
+              <ul class="qcTktFeatureList">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li><a href="#" class="tips" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit">Consectetur</a> adipisicing elit</li>
+                <li>Natus autem <a href="#" class="tips" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit">doloremque</a> alias <i>ducimus</i> eum minima</li>
+                <li>Iste nihil veritatis eius <i>voluptatum temporibus</i> ullam</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ## TAB 3 ## -->
+    <div id="tab-3">
+      <div class="box">
+
+        <!-- ## TAB DESC ## -->
+        <p class="qcPostContent padded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, harum odio ratione quos eius vel repellat quam accusantium consequatur dolore vitae voluptate perferendis minima suscipit illo porro commodi asperiores fugiat.</p>
+
+        <!-- ## TICKET FORM ## -->
+        <div class="qcTcktRegForm">
+          <form action="./assets/form/qcForm.php" id="qcContactForm" class="qcForm" name="qcContactForm" method="post">
+            <ul class="clearfix">
+              <li>
+                <div class="wrapper">
+                  <label for="ticket-name">Name</label>
+                  <input type="text" id="ticket-name" name="ticket-name" class="requiredField" value="" placeholder="Enter full name" />
+                </div>
+              </li>
+              <li>
+                <div class="wrapper">
+                  <label for="ticket-email">Email</label>
+                  <input type="text" id="ticket-email" name="ticket-email" class="email requiredField" value="" placeholder="Enter email-id" />
+                </div>
+              </li>
+              <li>
+                <div class="wrapper">
+                  <label for="ticket-phone">Phone</label>
+                  <input type="text" id="ticket-phone" name="ticket-phone" class="requiredField" value="" placeholder="Enter contact number" />
+                </div>
+              </li>
+              <li>
+                <div class="wrapper">
+                  <label for="ticket-type">Ticket</label>
+                  <select name="ticket-type" id="ticket-type" class="requiredField">
+                    <option value="">Select Package</option>
+                    <option value="general">General</option>
+                    <option value="vip">VIP</option>
+                    <option value="premium">Premium</option>
+                  </select>
+                  <select name="ticket-quantity" id="ticket-quantity" class="requiredField">
+                    <option value="">Quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </li>
+              <li class="full">
+                <div class="wrapper">
+                  <label for="ticket-tc">T & C</label>
+                  <input type="checkbox" id="ticket-tc" name="ticket-tc" value="accept" class="requiredField checkbox" >
+                  <span class="qcCheckboxText">I'm agree to the <a href="#">Terms &amp; Conditions</a>.</span>
+                </div>
+              </li>
+            </ul>
+            <div class="qcTcktSubmit">
+              <input type="hidden" name="formtype" value="ticket"/>
+              <button type="submit" class="submit">Submit form</button>
+            </div>
+
+          </form>
+        </div>
+        <!-- ## TICKET RSVP FORM END ## -->
+
+      </div>
+    </div>
+
+  </div>
+  <!-- ## PAGE CONTENT TABS END ## -->
+
+</div>
+<!-- ## PAGE CONTENT END ## -->
+
+
+<!-- ## PAGE WIDGET ## -->
+<div id="qcWidgets">
+  <div class="qcContainer clearfix">
+    <div class="widget">
+      <p class="qcWidgetTitle">Subscribe to our newsletter</p>
+
+      <!-- ## SUBSCRIBE WIDGET ## -->
+      <div id="qcSubscribeWidget">
+        <form action="#">
+          <input type="text" value="" placeholder="Enter your email id..."/>
+          <input type="submit" value="Subscribe" />
+        </form>
+        <p>NOTE: We respect your privacy & do not share your email id with 3rd party companies Or send you spams.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- ## PAGE WIDGETS END ## -->
