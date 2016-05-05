@@ -16,7 +16,7 @@ import {FooterComponent} from './footer.component';
 
 @RouteConfig([
 	{ path: '/schedule.html', name: 'Schedule', component: ScheduleComponent },
-	{ path: '/speakers', name: 'Speakers', component: SpeakersComponent },
+	{ path: '/attendees', name: 'Attendees', component: SpeakersComponent },
 	{ path: '/venue', name: 'Venue', component: VenueComponent },
 	{ path: '/gallery', name: 'Gallery', component: GalleryComponent },
 	{ path: '/tickets', name: 'Tickets', component: TicketsComponent },

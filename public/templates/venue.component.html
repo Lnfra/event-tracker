@@ -7,7 +7,8 @@
   </div>
   <!-- ## PAGE DESC ## -->
   <div class="col-8 col">
-    <p class="qcTabDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, amet, natus autem doloremque alias ducimus eum minima accusamus iste nihil veritatis eius voluptatum temporibus ullam consequatur velit aspernatur. Molestiae, quasi.</p>
+    <spinner [visible]="isLoading"></spinner>
+    <p class="qcTabDesc">{{ event?.description?.text }}</p>
   </div>
 </header>
 
@@ -21,13 +22,7 @@
     <!-- ## TAB LINKS ## -->
     <ul class="clearfix">
       <li class="active">
-        <a href="#tab-1">Map</a>
-      </li>
-      <li>
-        <a href="#tab-2">Layout</a>
-      </li>
-      <li>
-        <a href="#tab-3">Hotels</a>
+        <a>Map</a>
       </li>
       </ul>
 
@@ -36,199 +31,30 @@
         <div class="box">
 
           <!-- ## VENUE MAP & ADDRESS ## -->
-          <div id="qcAddressBox">
-            <div id="qcContactMap"></div>
-          <div id="qcMapAddress" data-lat="37.4416" data-lng="-122.1516" data-add="1600, Amphitheatre Parkway, Mountain View, CA 94043">
-          </div>
-          <div id="qcAddress">
+
+          <div class="col-6 col">
             <div>
-              <h3>Sun and Sand Resort</h3>
-              1600 Amphitheatre Parkway, <br />
-              Mountain View, <br />
-              CA 94043 <br />
-              Phone : +00 - 1234567890 <br />
-              Email : abc@def.com
+              <spinner [visible]="isLoading"></spinner>
+              <h3>{{venue?.name}}</h3>
+              {{venue?.address?.address_1}} <br />
+              {{venue?.address?.address_2}}<br />
+              {{venue?.address?.city}} {{venue?.address?.postal_code}}<br />
             </div>
-          </div>
-          </div>
+        </div>
+
+        <div class="col-6 col">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8013126067904!2d103.85518675047574!3d1.293696562108683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19af38dd2bf3%3A0xd63e8cb2dacf54c7!2sSuntec+Convention+%26+Exhibition+Centre!5e0!3m2!1sen!2ssg!4v1462489467856" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
 
           <!-- ## TAB DESC ## -->
         <p class="qcPostContent padded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, harum odio ratione quos eius vel repellat quam accusantium consequatur dolore vitae voluptate perferendis minima suscipit illo porro commodi asperiores fugiat.</p>
       </div>
       </div>
 
-      <!-- ## TAB 2 ## -->
-    <div id="tab-2">
-      <div class="box">
-
-        <!-- ## TAB DESC ## -->
-        <p class="qcPostContent padded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, harum odio ratione quos eius vel repellat quam accusantium consequatur dolore vitae voluptate perferendis minima suscipit illo porro commodi asperiores fugiat.</p>
-
-        <!-- ## VENUE LAYOUT LIST ## -->
-        <ul id="qcLayoutList">
-          <li>
-            <a href="#">
-              <span>Town Hall</span>
-              <img src="http://placehold.it/800x320?text=LAYOUT 1" alt=""/>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Linocln Park</span>
-              <img src="http://placehold.it/800x320?text=LAYOUT 2" alt=""/>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-
-    <!-- ## TAB 3 ## -->
-    <div id="tab-3">
-      <div class="box">
-
-        <!-- ## TAB DESC ## -->
-        <p class="qcPostContent padded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, harum odio ratione quos eius vel repellat quam accusantium consequatur dolore vitae voluptate perferendis minima suscipit illo porro commodi asperiores fugiat.</p>
-
-        <!-- ## VENUE HOTEL LIST ## -->
-        <div id="qcVenueHotelsHead" class="clearfix">
-          <div class="col-6 col">Name</div>
-          <div class="col-3 col">Range</div>
-          <div class="col-3 col">Bookings</div>
-        </div>
-        <ul id="qcVenueHotels" class="qcVenueHotels">
-          <li class="clearfix">
-            <div class="col-6 col">
-              <h2>Hotel Green Park</h2>
-              <p>Dr. Annie Besant Road, Worli, Mumbai - 400022</p>
-            </div>
-            <div class="col-3 col">
-              <p>3 km</p>
-            </div>
-            <div class="action col-3 col">
-              <a href="#">Book</a>
-            </div>
-          </li>
-          <li class="clearfix">
-            <div class="col-6 col">
-              <h2>Hotel Green Park</h2>
-              <p>Dr. Annie Besant Road, Worli, Mumbai - 400022</p>
-            </div>
-            <div class="col-3 col">
-              <p>500 Meter</p>
-            </div>
-            <div class="action col-3 col">
-              <a href="#">Book</a>
-            </div>
-          </li>
-          <li class="clearfix">
-            <div class="col-6 col">
-              <h2>Hotel Green Park</h2>
-              <p>Dr. Annie Besant Road, Worli, Mumbai - 400022</p>
-            </div>
-            <div class="col-3 col">
-              <p>20 km</p>
-            </div>
-            <div class="action col-3 col">
-              <a href="#">Book</a>
-            </div>
-          </li>
-        </ul>
-
-      </div>
-    </div>
 
   </div>
   <!-- ## PAGE CONTENT TABS END ## -->
 
 </div>
 <!-- ## PAGE CONTENT END ## -->
-
-
-<!-- ## PAGE WIDGET ## -->
-<div id="qcWidgets">
-  <div class="qcContainer clearfix">
-    <div class="widget">
-      <p class="qcWidgetTitle">What people are talking</p>
-
-      <!-- ## TESTIMONIAL WIDGET ## -->
-      <div id="qcTestimonialWidget">
-      <div class="col-6 col">
-        <ul id="qcTestimonialList" class="clearfix">
-          <li>
-            <a href="#" class="active" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=1" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=2" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doen via Twitter">
-              <img src="http://placehold.it/100x100?text=3" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=4" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=5" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=6" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=7" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=8" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=9" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=10" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=11" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=12" alt="" />
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- ## TESTIMONIAL TEXT ## -->
-      <div class="col-6 col">
-        <div id="qcTestimonial">
-          <p></p>
-          <cite></cite>
-        </div>
-      </div>
-      </div>
-      <!-- ## TESTIMONIAL WIDGET END ## -->
-
-    </div>
-  </div>
-</div>
-<!-- ## PAGE WIDGETS END ## -->

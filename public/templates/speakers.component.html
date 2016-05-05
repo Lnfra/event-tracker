@@ -2,225 +2,32 @@
 <header id="qcTabTitle" class="qcContainer clearfix">
   <!-- ## PAGE TITLE ## -->
   <div class="col-4 col">
-    <p>People who do the talking</p>
-    <h1>Speakers</h1>
+    <h1>Attendees</h1>
   </div>
   <!-- ## PAGE DESC ## -->
   <div class="col-8 col">
     <p class="qcTabDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, amet, natus autem doloremque alias ducimus eum minima accusamus iste nihil veritatis eius voluptatum temporibus ullam consequatur velit aspernatur. Molestiae, quasi.</p>
   </div>
 </header>
+<div class="col-4 col">
+</div>
+<div class="col-8 col">
+  <spinner [visible]="isLoading"></spinner>
+  <table *ngIf="attendees" >
+    <tr>
+      <td><h1>Total Number of Attendees: </h1></td>
+      <td><h1>{{ attendees?.orders?.length }}</h1></td>
+    </tr>
+  </table>
+
+</div>
 
 
-<!-- ## PAGE CONTENT ## -->
 <div class="hentry qcContainer speakers">
 
-  <!-- ## SPEAKERS LIST ## -->
-  <ul class="qcSpeakerList">
-    <!-- ## SPEAKERS 1 ## -->
-    <li>
-      <div class="item">
-        <img src="http://placehold.it/200x200?text=SPEAKER 1" alt="" />
-        <div class="item-title">
-          <h3>John Doe</h3>
-          <p>Founder</p>
-          <ul class="spkr-social clearfix">
-            <li><a href="#" class="tips" title="FACEBOOK"><i class="icon-facebook icon"></i></a></li>
-            <li><a href="#" class="tips" title="TWITTER"><i class="icon-twitter icon"></i></a></li>
-            <li><a href="#" class="tips" title="FLICKR"><i class="icon-flickr icon"></i></a></li>
-            <li><a href="#" class="tips" title="LINKEDIN"><i class="icon-linkedin icon"></i></a></li>
-          </ul>
-          <p class="read-more">Read More</p>
-        </div>
-        <div class="item-desc">
-          <h3>John Doe</h3>
-          <p>Founder</p>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-        </div>
-      </div>
-    </li>
-    <!-- ## SPEAKERS 2 ## -->
-    <li>
-      <div class="item">
-        <img src="http://placehold.it/200x200?text=SPEAKER 2" alt="" />
-        <div class="item-title">
-          <h3>Samantha Johns</h3>
-          <p>Director</p>
-          <ul class="spkr-social clearfix">
-            <li><a href="#" class="tips" title="SOUNDCLOUD"><i class="icon-soundcloud icon"></i></a></li>
-            <li><a href="#" class="tips" title="GITHUB"><i class="icon-github icon"></i></a></li>
-            <li><a href="#" class="tips" title="DRIBBBLE"><i class="icon-dribbble icon"></i></a></li>
-            <li><a href="#" class="tips" title="FORRST"><i class="icon-forrst icon"></i></a></li>
-          </ul>
-          <p class="read-more">Read More</p>
-        </div>
-        <div class="item-desc">
-          <h3>John Doe</h3>
-          <p>Founder</p>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam?</p>
-        </div>
-      </div>
-    </li>
-    <!-- ## SPEAKERS 3 ## -->
-    <li>
-      <div class="item">
-        <img src="http://placehold.it/200x200?text=SPEAKER 3" alt="" />
-        <div class="item-title">
-          <h3>Patrick Simpson</h3>
-          <p>Developer</p>
-          <ul class="spkr-social clearfix">
-            <li><a href="#" class="tips" title="FACEBOOK"><i class="icon-facebook icon"></i></a></li>
-            <li><a href="#" class="tips" title="TWITTER"><i class="icon-twitter icon"></i></a></li>
-            <li><a href="#" class="tips" title="FLICKR"><i class="icon-flickr icon"></i></a></li>
-            <li><a href="#" class="tips" title="LINKEDIN"><i class="icon-linkedin icon"></i></a></li>
-          </ul>
-          <p class="read-more">Read More</p>
-        </div>
-        <div class="item-desc">
-          <h3>John Doe</h3>
-          <p>Founder</p>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam?</p>
-        </div>
-      </div>
-    </li>
-    <!-- ## SPEAKERS 4 ## -->
-    <li>
-      <div class="item">
-        <img src="http://placehold.it/200x200?text=SPEAKER 4" alt="" />
-        <div class="item-title">
-          <h3>Ricky Martin</h3>
-          <p>Legal</p>
-          <ul class="spkr-social clearfix">
-            <li><a href="#"><i class="icon-soundcloud icon"></i></a></li>
-            <li><a href="#"><i class="icon-github icon"></i></a></li>
-            <li><a href="#"><i class="icon-dribbble icon"></i></a></li>
-            <li><a href="#"><i class="icon-forrst icon"></i></a></li>
-          </ul>
-          <p class="read-more">Read More</p>
-        </div>
-        <div class="item-desc">
-          <h3>John Doe</h3>
-          <p>Founder</p>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam?</p>
-        </div>
-      </div>
-    </li>
-    <!-- ## SPEAKERS 5 ## -->
-    <li>
-      <div class="item">
-        <img src="http://placehold.it/200x200?text=SPEAKER 5" alt="" />
-        <div class="item-title">
-          <h3>Ricky Martin</h3>
-          <p>Legal</p>
-          <ul class="spkr-social clearfix">
-            <li><a href="#"><i class="icon-soundcloud icon"></i></a></li>
-            <li><a href="#"><i class="icon-github icon"></i></a></li>
-            <li><a href="#"><i class="icon-dribbble icon"></i></a></li>
-            <li><a href="#"><i class="icon-forrst icon"></i></a></li>
-          </ul>
-          <p class="read-more">Read More</p>
-        </div>
-        <div class="item-desc">
-          <h3>John Doe</h3>
-          <p>Founder</p>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quasi vel dicta optio nobis accusamus unde! Sequi, nobis accusantium illo dolore reiciendis quod nostrum laboriosam distinctio quae error soluta numquam?</p>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <!-- ## SPEAKERS END ## -->
 
   <!-- ## POST CONTENT ## -->
   <p class="qcPostContent padded">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, harum odio ratione quos eius vel repellat quam accusantium consequatur dolore vitae voluptate perferendis minima suscipit illo porro commodi asperiores fugiat.</p>
 
 </div>
 <!-- ## PAGE CONTENT END ## -->
-
-
-<!-- ## PAGE WIDGET ## -->
-<div id="qcWidgets">
-  <div class="qcContainer clearfix">
-    <div class="widget">
-      <p class="qcWidgetTitle">What people are talking</p>
-
-      <!-- ## TESTIMONIAL WIDGET ## -->
-      <div id="qcTestimonialWidget">
-      <div class="col-6 col">
-        <ul id="qcTestimonialList" class="clearfix">
-          <li>
-            <a href="#" class="active" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=1" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=2" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doen via Twitter">
-              <img src="http://placehold.it/100x100?text=3" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=4" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=5" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=6" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=7" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=8" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=9" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=10" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." data-cite="John Doe via Twitter">
-              <img src="http://placehold.it/100x100?text=11" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#" data-content="quibusdam est porro illum adipisci minima cupiditate sequi velit eaque enim sed nihil excepturi repellendus eum error vero!" data-cite="Samantha via Twitter">
-              <img src="http://placehold.it/100x100?text=12" alt="" />
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- ## TESTIMONIAL TEXT ## -->
-      <div class="col-6 col">
-        <div id="qcTestimonial">
-          <p></p>
-          <cite></cite>
-        </div>
-      </div>
-      </div>
-      <!-- ## TESTIMONIAL WIDGET END ## -->
-
-    </div>
-  </div>
-</div>
-<!-- ## PAGE WIDGETS END ## -->

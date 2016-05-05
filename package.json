@@ -21,8 +21,14 @@
   },
   "homepage": "https://github.com/Lnfra/event-tracker#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "browser-sync": "^2.12.5",
+    "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
+    "instagram-node": "^0.5.8",
+    "mongoose": "^4.4.14",
+    "morgan": "^1.7.0",
+    "nbrite": "^0.2.0",
     "socket.io": "^1.4.5"
   },
   "devDependencies": {
