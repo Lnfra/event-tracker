@@ -63,7 +63,7 @@ System.register(['angular2/core', 'angular2/router', './navbar.component', './sc
                 AppComponent = __decorate([
                     router_1.RouteConfig([
                         { path: '/schedule.html', name: 'Schedule', component: schedule_component_1.ScheduleComponent },
-                        { path: '/speakers', name: 'Speakers', component: speakers_component_1.SpeakersComponent },
+                        { path: '/attendees', name: 'Attendees', component: speakers_component_1.SpeakersComponent },
                         { path: '/venue', name: 'Venue', component: venue_component_1.VenueComponent },
                         { path: '/gallery', name: 'Gallery', component: gallery_component_1.GalleryComponent },
                         { path: '/tickets', name: 'Tickets', component: tickets_component_1.TicketsComponent },
