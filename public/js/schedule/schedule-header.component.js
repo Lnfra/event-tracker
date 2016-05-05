@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,38 +10,29 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1;
-    var NavBarComponent;
+    var core_1;
+    var ScheduleHeaderComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
             }],
         execute: function() {
-            NavBarComponent = (function () {
-                function NavBarComponent(_router) {
-                    this._router = _router;
+            ScheduleHeaderComponent = (function () {
+                function ScheduleHeaderComponent() {
                 }
-                NavBarComponent.prototype.isCurrentRoute = function (route) {
-                    var instruction = this._router.generate(route);
-                    return this._router.isRouteActive(instruction);
-                };
-                NavBarComponent = __decorate([
+                ScheduleHeaderComponent = __decorate([
                     core_1.Component({
-                        selector: 'navbar',
-                        templateUrl: 'templates/navbar.component.html',
-                        directives: [router_1.ROUTER_DIRECTIVES]
+                        selector: 'schedule-header',
+                        templateUrl: 'templates/schedule-header.component.html'
                     }), 
-                    __metadata('design:paramtypes', [router_1.Router])
-                ], NavBarComponent);
-                return NavBarComponent;
+                    __metadata('design:paramtypes', [])
+                ], ScheduleHeaderComponent);
+                return ScheduleHeaderComponent;
             }());
-            exports_1("NavBarComponent", NavBarComponent);
+            exports_1("ScheduleHeaderComponent", ScheduleHeaderComponent);
         }
     }
 });
 
-//# sourceMappingURL=navbar.component.js.map
+//# sourceMappingURL=schedule-header.component.js.map

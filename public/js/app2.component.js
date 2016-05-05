@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './navbar.component', './schedule/schedule.component', './speakers/speakers.component', './venue/venue.component', './gallery/gallery.component', './tickets/tickets.component', './faq/faq.component', './users/users.component', './users/user-form.component', './posts/posts.component', './not-found.component', './footer.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', './navbar.component', './home.component', './users/users.component', './users/user-form.component', './posts/posts.component', './not-found.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', './navbar.component', './sc
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, navbar_component_1, schedule_component_1, speakers_component_1, venue_component_1, gallery_component_1, tickets_component_1, faq_component_1, users_component_1, user_form_component_1, posts_component_1, not_found_component_1, footer_component_1;
+    var core_1, router_1, navbar_component_1, home_component_1, users_component_1, user_form_component_1, posts_component_1, not_found_component_1;
     var AppComponent;
     return {
         setters:[
@@ -23,23 +23,8 @@ System.register(['angular2/core', 'angular2/router', './navbar.component', './sc
             function (navbar_component_1_1) {
                 navbar_component_1 = navbar_component_1_1;
             },
-            function (schedule_component_1_1) {
-                schedule_component_1 = schedule_component_1_1;
-            },
-            function (speakers_component_1_1) {
-                speakers_component_1 = speakers_component_1_1;
-            },
-            function (venue_component_1_1) {
-                venue_component_1 = venue_component_1_1;
-            },
-            function (gallery_component_1_1) {
-                gallery_component_1 = gallery_component_1_1;
-            },
-            function (tickets_component_1_1) {
-                tickets_component_1 = tickets_component_1_1;
-            },
-            function (faq_component_1_1) {
-                faq_component_1 = faq_component_1_1;
+            function (home_component_1_1) {
+                home_component_1 = home_component_1_1;
             },
             function (users_component_1_1) {
                 users_component_1 = users_component_1_1;
@@ -52,9 +37,6 @@ System.register(['angular2/core', 'angular2/router', './navbar.component', './sc
             },
             function (not_found_component_1_1) {
                 not_found_component_1 = not_found_component_1_1;
-            },
-            function (footer_component_1_1) {
-                footer_component_1 = footer_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -62,23 +44,18 @@ System.register(['angular2/core', 'angular2/router', './navbar.component', './sc
                 }
                 AppComponent = __decorate([
                     router_1.RouteConfig([
-                        { path: '/schedule.html', name: 'Schedule', component: schedule_component_1.ScheduleComponent },
-                        { path: '/speakers', name: 'Speakers', component: speakers_component_1.SpeakersComponent },
-                        { path: '/venue', name: 'Venue', component: venue_component_1.VenueComponent },
-                        { path: '/gallery', name: 'Gallery', component: gallery_component_1.GalleryComponent },
-                        { path: '/tickets', name: 'Tickets', component: tickets_component_1.TicketsComponent },
-                        { path: '/faq', name: 'Faq', component: faq_component_1.FaqComponent },
+                        { path: '/index2', name: 'Home', component: home_component_1.HomeComponent },
                         { path: '/users', name: 'Users', component: users_component_1.UsersComponent },
                         { path: '/users/:id', name: 'EditUser', component: user_form_component_1.UserFormComponent },
                         { path: '/users/new', name: 'NewUser', component: user_form_component_1.UserFormComponent },
                         { path: '/posts', name: 'Posts', component: posts_component_1.PostsComponent },
                         { path: '/not-found', name: 'NotFound', component: not_found_component_1.NotFoundComponent },
-                        { path: '/*other', name: 'Other', redirectTo: ['Schedule'] }
+                        { path: '/*other', name: 'Other', redirectTo: ['Home'] }
                     ]),
                     core_1.Component({
-                        selector: 'my-app',
-                        template: "\n        <navbar></navbar>\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n\t\t\t \t<footer></footer>\n    ",
-                        directives: [navbar_component_1.NavBarComponent, footer_component_1.FooterComponent, router_1.ROUTER_DIRECTIVES]
+                        selector: 'my-app2',
+                        template: "\n        <navbar></navbar>\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n    ",
+                        directives: [navbar_component_1.NavBarComponent, router_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
@@ -89,4 +66,4 @@ System.register(['angular2/core', 'angular2/router', './navbar.component', './sc
     }
 });
 
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=app2.component.js.map
