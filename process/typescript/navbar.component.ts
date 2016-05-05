@@ -3,7 +3,7 @@ import {ROUTER_DIRECTIVES, Router} from 'angular2/router'
 
 @Component({
     selector: 'navbar',
-    templateUrl: '../templates/navbar.component.html',
+    templateUrl: 'templates/navbar.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
 export class NavBarComponent {
