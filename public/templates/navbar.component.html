@@ -1,22 +1,54 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" [routerLink]="['Home']">ngProject</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li [class.active]="isCurrentRoute(['Users'])"><a [routerLink]="['Users']">Users</a></li>
-        <li [class.active]="isCurrentRoute(['Posts'])"><a [routerLink]="['Posts']">Posts</a></li>
-      </ul>
+<!-- ## SITE NAV ## -->
+<aside id="qcSiteNav">
+  <div class="box">
+    <h4>Navigation</h4>
+    <ul id="qcPriNav">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="#">Event</a>
+        <!-- ## SUBMENU ## -->
+        <ul>
+          <li [class.active]="isCurrentRoute(['Schedule'])"><a [routerLink]="['Schedule']">Schedule</a></li>
+          <li [class.active]="isCurrentRoute(['Speakers'])"><a [routerLink]="['Speakers']">Speakers</a></li>
+          <li [class.active]="isCurrentRoute(['Venue'])"><a [routerLink]="['Venue']">Venue</a></li>
+          <li [class.active]="isCurrentRoute(['Gallery'])"><a [routerLink]="['Gallery']">Gallery</a></li>
+          <li [class.active]="isCurrentRoute(['Tickets'])"><a [routerLink]="['Tickets']">Tickets</a></li>
+          <li [class.active]="isCurrentRoute(['Faq'])"><a [routerLink]="['Faq']">FAQ's</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Login / Signup</a></li>
+    </ul>
+    <div id="qcCloseNav"></div>
+  </div>
+</aside>
+<!-- ## SITE NAV END ## -->
 
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<!-- ## PRIMARY HEADER ## -->
+<header id="qcHeader">
+  <div class="qcContainer clearfix">
+    <div id="qcNavLogo" class="col-6 col">
+      <a href="index.html">
+        <img src="./assets/img/placeholder/logo.png" alt="LOGO" />
+      </a>
+    </div>
+    <div class="col-6 col">
+      <div id="qcOpenNav" class="tips" title="NAVIGATION"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ## MOB NAV ## -->
+<div class="qcContainer clearfix">
+  <div id="qcMbTrigger"></div>
+</div>
+
+<!-- ## SUBTAB NAV ## -->
+<ul id="qcTabNav" class="qcContainer clearfix">
+  <li [class.active]="isCurrentRoute(['Schedule'])"><a [routerLink]="['Schedule']"><i class="menu-icon-calendar icon"></i> <span>Schedule</span></a></li>
+  <li [class.active]="isCurrentRoute(['Speakers'])"><a [routerLink]="['Speakers']"><i class="menu-icon-user icon"></i> <span>Speakers</span></a></li>
+  <li [class.active]="isCurrentRoute(['Venue'])"><a [routerLink]="['Venue']"><i class="menu-icon-shop icon"></i> <span>Venue</span></a></li>
+  <li [class.active]="isCurrentRoute(['Gallery'])"><a [routerLink]="['Gallery']"><i class="menu-icon-photo icon"></i> <span>Gallery</span></a></li>
+  <li [class.active]="isCurrentRoute(['Tickets'])"><a [routerLink]="['Tickets']"><i class="menu-icon-money icon"></i> <span>Tickets</span></a></li>
+  <li [class.active]="isCurrentRoute(['Faq'])"><a [routerLink]="['Faq']"><i class="menu-icon-globe icon"></i> <span>FAQ's</span></a></li>
+</ul>
