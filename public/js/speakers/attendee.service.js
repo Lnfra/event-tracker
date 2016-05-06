@@ -25,7 +25,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map'], fun
             AttendeeService = (function () {
                 function AttendeeService(_http) {
                     this._http = _http;
-                    this._url = "http://localhost:3000/api/";
+                    this._url = "https://fathomless-garden-38356.herokuapp.com/api/";
                 }
                 AttendeeService.prototype.getEventOrders = function () {
                     return this._http.get(this._url + 'eventOrders')
