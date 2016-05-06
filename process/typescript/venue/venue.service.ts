@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class VenueService {
-  private _url = "http://localhost:3000/api/";
+  private _url = "https://fathomless-garden-38356.herokuapp.com/api/";
 
   constructor(private _http: Http){
   }
